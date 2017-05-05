@@ -103,7 +103,11 @@ public class Lightning_Custom : MonoBehaviour
         arc_list = list_in;
 
         line_rend = GetComponent<LineRenderer>();
+<<<<<<< HEAD
         line_rend.numPositions = 0;
+=======
+        line_rend.positionCount = 0;
+>>>>>>> origin/Scene_Terrain
         empty = new Vector3(0.0f, 0.0f, 0.0f);
 
         final_index = 0;
@@ -118,7 +122,11 @@ public class Lightning_Custom : MonoBehaviour
         if(autogenerate == true)
         {
             line_rend = GetComponent<LineRenderer>();
+<<<<<<< HEAD
             line_rend.numPositions = 0;
+=======
+            line_rend.positionCount = 0;
+>>>>>>> origin/Scene_Terrain
             empty = new Vector3(0.0f, 0.0f, 0.0f);
 
             final_index = 0;
@@ -138,7 +146,11 @@ public class Lightning_Custom : MonoBehaviour
             if (!autogenerate)
             {
                 timer = Duration;
+<<<<<<< HEAD
                 line_rend.numPositions = 0;
+=======
+                line_rend.positionCount = 0;
+>>>>>>> origin/Scene_Terrain
 
                 //attempt: delete all non automatic bolts at the end. Assumes
                 //that any manual bolts will be created objects.
@@ -279,7 +291,11 @@ public class Lightning_Custom : MonoBehaviour
         generate_Bolt(start, end, Generations);
 
         //Updating the Unity Line Renderer
+<<<<<<< HEAD
         line_rend.numPositions = total_segments + 1;
+=======
+        line_rend.positionCount = total_segments + 1;
+>>>>>>> origin/Scene_Terrain
 
         int index_pos = 0;
         //add the starting point to the list of line positions.

@@ -70,8 +70,13 @@ public class Thunderstorm : MonoBehaviour
 
     void new_cloud()
     {
+<<<<<<< HEAD
         float x_pos = Random.Range(-radius, radius);
         float z_pos = Random.Range(-radius, radius);
+=======
+		float x_pos = Random.Range(transform.position.x - radius, transform.position.x + radius);
+		float z_pos = Random.Range(transform.position.z - radius, transform.position.z +radius);
+>>>>>>> origin/Scene_Terrain
 
         Vector3 cloud_pos = new Vector3(x_pos, cloud_height, z_pos);
         Vector3 final_pos = new Vector3(x_pos, 0.0f, z_pos);
@@ -89,7 +94,12 @@ public class Thunderstorm : MonoBehaviour
                 final_pos.y = hit.point.y;
             }
 
+<<<<<<< HEAD
             height_dist = cloud_height - final_pos.y;
+=======
+            //height_dist = cloud_height - final_pos.y;
+			height_dist = (cloud_pos - final_pos).magnitude;
+>>>>>>> origin/Scene_Terrain
         }
 
 
@@ -101,8 +111,14 @@ public class Thunderstorm : MonoBehaviour
             {
 
                 for (int i = 0; i < arc_list.Count; i++)
+<<<<<<< HEAD
                 {
                     float dist = (arc_list[i].GetComponent<Transform>().position - cloud_pos).magnitude;
+=======
+                {
+					//Debug.Log("Height: " + arc_list[i].GetComponent<Transform>().position);
+					float dist = (cloud_pos - arc_list[i].GetComponent<Transform>().position).magnitude;
+>>>>>>> origin/Scene_Terrain
                     if (dist < height_dist)
                     {
                         height_dist = dist;
